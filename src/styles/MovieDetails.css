@@ -1,0 +1,36 @@
+.movie-detail-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 10px;
+}
+
+.movie-detail-container h2 {
+    color: #ffffff;
+}
+
+.movie-detail-container img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.movie-detail-container p {
+    color: #ffffff;
+}
+
+.movie-detail-container button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .movie-detail-container {
+        max-width: 80%;
+    }
+}
