@@ -53,3 +53,10 @@
 .Link-button:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 1050px) {
+    .Home {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
