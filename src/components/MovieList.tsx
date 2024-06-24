@@ -40,11 +40,13 @@ const MovieList: React.FC = () => {
   return (
     <div>
       <div className='movie-top'>
-        <button onClick={() => navigate(-1)}>Back</button>
+        <div className="button-div">
+          <button onClick={() => navigate(-1)}>Back</button>
+          <button onClick={handleSignOut} className="signout-button">
+            Sign Out
+          </button>
+        </div>
         <h2>Hello {profile.nickname}, what would you like to watch today?</h2>
-        <button onClick={handleSignOut} className="signout-button">
-          Sign Out
-        </button>
       </div>
       <div className="movie-container">
         {movies.map((movie) => (

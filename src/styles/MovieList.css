@@ -9,9 +9,14 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.movie-top {
+.button-div {
     display: grid;
-    grid-template-columns: 1fr 10fr 1fr;
+}
+
+.movie-top {
+    display: flex;
+    gap: 20%;
+    /* grid-template-columns: 1fr 11fr; */
     padding: 50px;
     align-items: center;
     justify-content: center;
@@ -64,6 +69,26 @@ button:hover {
     background-color: #f40612;
 }
 
+.skeleton-movie-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skeleton-image {
+    width: 120px;
+    height: 180px;
+    background-color: #ccc;
+    margin-right: 20px;
+}
+
+.skeleton-title {
+    width: 200px;
+    height: 20px;
+    background-color: #f0f0f0;
+}
+
+
 
 @media (max-width: 1080px) {
     .movie-container {
@@ -74,5 +99,16 @@ button:hover {
 @media (max-width: 550px) {
     .movie-container {
         grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .button-div {
+        display: flex;
+        gap: 20px;
+    }
+
+    .movie-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
 }

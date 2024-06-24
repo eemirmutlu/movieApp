@@ -48,13 +48,15 @@ const Navbar: React.FC = () => {
             <Link to="/profiles" className={location.pathname === '/profiles' ? 'active' : ''}>
               Profile
             </Link>
-            <Link
-              to="/movies"
-              className={location.pathname.includes('/movies') ? 'active' : ''}
-              onClick={handleMoviesClick}
-            >
-              Movies
-            </Link>
+            {location.pathname === '/profiles' ? '' :
+              <Link
+                to="/movies"
+                className={location.pathname.includes('/movies') ? 'active' : ''}
+                onClick={handleMoviesClick}
+              >
+                Movies
+              </Link>
+            }
           </>
         )}
       </div>
