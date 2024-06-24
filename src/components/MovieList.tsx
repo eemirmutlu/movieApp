@@ -47,6 +47,7 @@ const MovieList: React.FC = () => {
           </button>
         </div>
         <h2>Hello {profile.nickname}, what would you like to watch today?</h2>
+        <div></div>
       </div>
       <div className="movie-container">
         {movies.map((movie) => (

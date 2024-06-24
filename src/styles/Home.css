@@ -54,44 +54,9 @@
     text-decoration: underline;
 }
 
-.skeleton-loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.skeleton-button {
-    width: 120px;
-    height: 40px;
-    margin: 0 10px;
-    background-color: #f0f0f0;
-    border: 1px solid #e0e0e0;
-    border-radius: 5px;
-    animation: loadingAnimation 1.5s infinite ease-in-out;
-}
-
-@keyframes loadingAnimation {
-    0% {
-        opacity: 0.7;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0.7;
-    }
-}
-
 @media (max-width: 1050px) {
     .Home {
         padding-left: 100px;
         padding-right: 100px;
-    }
-
-    .skeleton-loading {
-        display: grid;
-        gap: 20px;
     }
 }
