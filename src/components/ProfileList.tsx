@@ -14,7 +14,7 @@ const ProfileList: React.FC = () => {
   useEffect(() => {
     const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
     const profiles = JSON.parse(localStorage.getItem(currentUser.email + '_profiles') || '[]');
-    setProfiles(profiles);
+    setProfiles(profiles.slice(0, 4));
   }, []);
 
   const handleProfileCreate = () => {
@@ -30,7 +30,7 @@ const ProfileList: React.FC = () => {
           <button onClick={handleProfileCreate}>Create Profile</button>
         </div>
       ) : (
-        <div className="profile-container">
+        <div className="profiles-grid">
           {profiles.map((profile, index) => (
             <div key={index} className="profile-item" onClick={() => navigate('/movies', { state: { profile } })}>
               <img src={profile.profilePic} alt="Profile" />

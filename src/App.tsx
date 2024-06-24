@@ -6,10 +6,12 @@ import SignIn from './components/SignIn';
 import Profiles from './pages/Profiles';
 import ProfileCreate from './components/ProfileCreate';
 import Movies from './pages/Movies';
+import Navbar from './components/Navbar';
 
 const App: React.FC = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />

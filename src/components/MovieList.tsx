@@ -31,16 +31,29 @@ const MovieList: React.FC = () => {
       });
   }, []);
 
+  const handleSignOut = () => {
+    localStorage.removeItem('currentUser');
+    navigate('/');
+  };
+
+
   return (
-    <div className="movie-container">
-      <h2>Hello {profile.nickname}, what would you like to watch today?</h2>
-      {movies.map((movie) => (
-        <div key={movie.id} className="movie-item" onClick={() => navigate(`/movies/${movie.id}`)}>
-          <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
-          <p>{movie.title}</p>
-        </div>
-      ))}
-      <button onClick={() => navigate(-1)}>Back</button>
+    <div>
+      <div className='movie-top'>
+        <button onClick={() => navigate(-1)}>Back</button>
+        <h2>Hello {profile.nickname}, what would you like to watch today?</h2>
+        <button onClick={handleSignOut} className="signout-button">
+          Sign Out
+        </button>
+      </div>
+      <div className="movie-container">
+        {movies.map((movie) => (
+          <div key={movie.id} className="movie-item" onClick={() => navigate(`/movies/${movie.id}`)}>
+            <img src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt={movie.title} />
+            <p>{movie.title}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
