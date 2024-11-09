@@ -3,8 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta http-equiv="refresh" content="0;url=https://movie-app-ten-red.vercel.app/" />
-    <title>Vite + React + TS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <script>
+      // Yönlendirme yapılacak URL
+      const redirectUrl = "https://movie-app-ten-red.vercel.app/";
+
+      // Sayfa ilk yüklendiğinde yönlendirme yap
+      window.onload = () => {
+        if (window.location.href !== redirectUrl) {
+          window.location.replace(redirectUrl);
+        }
+      };
+    </script>
   </head>
   <body>
     <div id="root"></div>
